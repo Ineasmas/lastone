@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".SelectionActivity">
+
+
+
+
+        <LinearLayout
+            android:id="@+id/layout_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:id="@+id/layout_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="235dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_budget"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Бюджет"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/edt_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/nice_edt"
+                        android:drawableStart="@drawable/ic_ruble"
+                        android:ems="10"
+
+                        android:hint="Введите сумму"
+                        android:inputType="number"
+                        android:minHeight="48dp"
+                        android:paddingStart="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_tasks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Предпочтения"
+                        android:textAlignment="center" />
+
+                    <Spinner
+                        android:id="@+id/spr_cpuChoose"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/nice_edt"
+                        android:entries="@array/tasks"
+                        android:minHeight="48dp"
+                        android:textAlignment="center" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_parts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layout_cpu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/ttv_cpu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Процессор" />
+
+                    <EditText
+                        android:id="@+id/tv_cpu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/nice_edt"
+                        android:drawableStart="@drawable/ic_cpu"
+                        android:drawablePadding="5dp"
+                        android:ems="20"
+                        android:focusable="false"
+                        android:inputType="text"
+                        android:minHeight="48dp"
+                        android:paddingStart="10dp"
+                        android:text=""
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_motherboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ttv_motherboard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Материнская плата" />
+
+                    <EditText
+                        android:id="@+id/tv_mb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/nice_edt"
+                        android:drawableStart="@drawable/ic_motherboard"
+                        android:drawablePadding="5dp"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:inputType="text"
+                        android:minHeight="48dp"
+                        android:paddingStart="10dp"
+                        android:text=""
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_videocard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ttv_videocard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Видеокарта" />
+
+                    <EditText
+                        android:id="@+id/tv_gpu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/nice_edt"
+                        android:drawableStart="@drawable/ic_videocard"
+                        android:drawablePadding="5dp"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:inputType="text"
+                        android:minHeight="48dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text=""
+
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_ram"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="303dp"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/ttv_ram1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Оперативная память" />
+
+                        <EditText
+                            android:id="@+id/tv_ram"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/nice_edt"
+                            android:drawableStart="@drawable/ic_ram"
+                            android:drawablePadding="5dp"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:inputType="text"
+                            android:minHeight="48dp"
+                            android:paddingStart="10dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/ttv_ram"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Количество"
+                            android:textAlignment="center" />
+
+                        <EditText
+                            android:id="@+id/tv_chmo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/nice_edt"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:gravity="center"
+                            android:inputType="text"
+                            android:minHeight="48dp"
+                            android:text="" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_cpucool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ttv_cpucool"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Охлаждение процессора" />
+
+                <EditText
+                    android:id="@+id/tv_cpufan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/nice_edt"
+                    android:drawableStart="@drawable/ic_cpufan"
+                    android:drawablePadding="5dp"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:paddingStart="10dp"
+                    android:text=""
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_datastorage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ttv_datastorage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Хранение данных" />
+
+                <EditText
+                    android:id="@+id/tv_ssd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/nice_edt"
+                    android:drawableStart="@drawable/ic_memory"
+                    android:drawablePadding="5dp"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:paddingStart="10dp"
+                    android:textSize="15sp"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_energy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ttv_energy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Блок питания" />
+
+                <EditText
+                    android:id="@+id/tv_psu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/nice_edt"
+                    android:drawableStart="@drawable/ic_power"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:paddingStart="10dp"
+                    android:text=""
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_endprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ttv_endprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Итого сумма" />
+
+                <EditText
+                    android:id="@+id/tv_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/nice_edt"
+                    android:drawableStart="@drawable/ic_ruble"
+                    android:drawablePadding="5dp"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:paddingStart="10dp"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btSelection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="67dp"
+                    android:onClick="startSelection"
+                    android:text="Подобрать комплектующие"
+                    app:cornerRadius="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btToMinexc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="-60dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toEndOf="@+id/btSelection"
+                    android:onClick="toMinexc">
+
+                    <View
+                        android:id="@+id/buyBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="53dp"
+                        android:background="@drawable/image_button_background"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/minexc_favicon"
+                        app:layout_constraintBottom_toBottomOf="@+id/buyBackground"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/buyBackground"
+                        app:layout_constraintTop_toTopOf="@+id/buyBackground"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp" />
+
+
+
+
+        </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

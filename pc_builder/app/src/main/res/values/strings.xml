@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">pc_builder</string>
+    <string-array name="tasks">
+        <item>Все</item>
+        <item>Intel</item>
+        <item>AMD</item>
+    </string-array>
+</resources>
